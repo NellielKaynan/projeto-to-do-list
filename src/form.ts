@@ -6,7 +6,7 @@ export function criaOpcoesDoSelect(idSelecionado: string, opcoes: Record<string,
   if(!document) return
   const selectCampo = document.getElementById(idSelecionado) as HTMLSelectElement | null // o null é para tratar caso o elemento não seja encontrado
   if (!selectCampo || !selectCampo.checkValidity()) return // condicional para verificar se elemento não existe
-  const listaDeOpcoes = Object.values(opcoes)
+  const listaDeOpcoes = Object.value(opcoes)
   listaDeOpcoes.forEach((opcao) => {
     const elementoOpcao = document.createElement('option')
     elementoOpcao.innerText = opcao.texto
