@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <titulo>Task Manager</titulo>
+    <link rel="stylesheet" href="base/global.css" />
+  </head>
+  <body id="content">
+    <aside class="menu__lateral">
+      <section class="menu__perfil">
+        <img
+          class="menu__perfil-imagem"
+          src="assets/imagens/avatar.png"
+          alt=""
+        />
+        <h1 class="menu__perfil-titulo">Capivara da Silva</h1>
+        <h2 class="menu__perfil-subtitulo">Desenvolvedora de Software</h2>
+
+        <ul class="menu__social-media">
+          <li class="menu__social-media--item">
+            <a href="#">
+              <img src="assets/icones/in.svg" alt="#" />
+            </a>
+          </li>
+          <li class="menu__social-media--item">
+            <a href="#">
+              <img src="assets/icones/gb.svg" alt="#" />
+            </a>
+          </li>
+          <li class="menu__social-media--item">
+            <a href="#">
+              <img src="assets/icones/em.svg" alt="#" />
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <nav>
+        <ul class="menu-principal__lista">
+          <li class="menu-principal-item">
+            <img
+              class="menu-principal-svg"
+              src="assets/icones/layout.svg"
+              alt=""
+            />
+            <a class="menu-principal-link" href="index.html">Dashboard</a>
+          </li>
+          <li class="menu-principal-item">
+            <img
+              class="menu-principal-svg"
+              src="assets/icones/to-do.svg"
+              alt=""
+            />
+            <a class="menu-principal-link" href="lista-de-tarefas.html">To-do</a>
+          </li>
+          <li class="menu-principal-item">
+            <img
+              class="menu-principal-svg"
+              src="assets/icones/pencil.svg"
+              alt=""
+            />
+            <a class="menu-principal-link" href="codigo.html">Códigos</a>
+          </li>
+          <li class="menu-principal-item">
+            <img
+              class="menu-principal-svg"
+              src="assets/icones/cloud.svg"
+              alt=""
+            />
+            <a class="menu-principal-link" href="objetivos.html">Objetivos</a>
+          </li>
+          <li class="menu-principal-item">
+            <img
+              class="menu-principal-svg"
+              src="assets/icones/lightning.svg"
+              alt=""
+            />
+            <a class="menu-principal-link" href="ideias.html">Ideias</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="menu__botoes-mode">
+        <button class="botoes-mode botoes-mode--light">
+          <img src="assets/icones/sun.svg" alt="" />
+        </button>
+        <button class="botoes-mode botoes-mode--dark">
+          <img src="assets/icones/moon.svg" alt="" />
+        </button>
+      </div>
+
+      <p class="menu__lateral-rodape">
+        © 2024 | Desenvolvido no programa Alura Boost com Grupo Mateus por
+        Capivara da Silva | Todos os direitos reservados.
+      </p>
+    </aside>
+
+    <div class="container__conteudo">
+      <form class="form" id="formularioTarefas">
+        <div class="form__info--row">
+          <fieldset class="form__info--column">
+            <label for="titulo">Título</label>
+            <input
+              type="text"
+              placeholder="Levar o carro para revisão"
+              class="container__input"
+              id="titulo"
+              minlength="3"
+              maxlength="25"
+              required
+            />
+          </fieldset>
+
+          <fieldset class="form__info--column">
+            <label for="prioridade">Prioridade</label>
+            <select class="container__input" id="prioridade" required></select>
+          </fieldset>
+
+          <fieldset class="form__info--column">
+            <label for="categoria">Categoria</label>
+            <select class="container__input" id="categoria" required></select>
+          </fieldset>
+
+          <fieldset class="form__info--column">
+            <label for="data">Data</label>
+            <input class="container__input" type="data" name="" id="data" />
+          </fieldset>
+        </div>
+
+        <fieldset class="form__info--column container__textarea">
+          <label for="descricao">Descrição</label>
+          <textarea
+            placeholder="Oficina XYZ para revisão completa e relatar barulho estranho na embreagem."
+            class="container__input container__input--textarea"
+            id="descricao"
+            maxlength="100"
+          ></textarea>
+        </fieldset>
+
+        <fieldset class="container__buttons">
+          <!-- <button class="form__button" id="botaoLimpar" type="button">
+            Limpar
+          </button> -->
+          <button class="form__button form__button--dark" id="addButton">
+            Adicionar
+          </button>
+        </fieldset>
+      </form>
+
+      <main class="main__taskList">
+        <h2 class="main__taskList--titulo">Tarefas</h2>
+
+        <ul id="taskList" class="taskList">
+          <li class="taskList__task">
+            <div class="task__info--column">
+              <div class="task__info--row">
+                <div class="task__prioridade task__prioridade--medium">Média</div>
+                <div class="task__categoria">Família</div>
+                <div class="task__data">12/12/2012</div>
+              </div>
+              <div class="task__info--row">
+                <div class="task__titulo">Levar carro na revisão</div>
+                <div class="task__descricao">
+                  Oficina XYZ para revisão completa e falar do barulho estranho
+                  na embreagem.
+                </div>
+              </div>
+            </div>
+            <div class="task__buttons">
+              <button class="task__delete" type="button">
+                <svg
+                  width="32"
+                  height="24"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1_128)">
+                    <path
+                      d="M3.34131 6.33332H16.6746"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.34131 9.66665V14.6666"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.6746 9.66665V14.6666"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M4.17456 6.33332L5.00789 16.3333C5.00789 16.7753 5.18349 17.1993 5.49605 17.5118C5.80861 17.8244 6.23253 18 6.67456 18H13.3412C13.7833 18 14.2072 17.8244 14.5197 17.5118C14.8323 17.1993 15.0079 16.7753 15.0079 16.3333L15.8412 6.33332"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.50793 6.33332V3.83332C7.50793 3.6123 7.59573 3.40034 7.75201 3.24406C7.90829 3.08778 8.12025 2.99998 8.34127 2.99998H11.6746C11.8956 2.99998 12.1076 3.08778 12.2639 3.24406C12.4201 3.40034 12.5079 3.6123 12.5079 3.83332V6.33332"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_128">
+                      <rect
+                        width="20"
+                        height="20"
+                        fill="white"
+                        transform="translate(0.00793457 0.499985)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </main>
+    </div>
+
+    <script defer src="../dist/index.js" type="text/javascript"></script>
+  </body>
+</html>

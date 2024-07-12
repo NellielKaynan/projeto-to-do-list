@@ -1,0 +1,28 @@
+html {
+  --white: #ffffff;
+  --black: #000000;
+  --cod-gray: #181818;
+  --tundora: #4a4a4a;
+  --scorpion: #5c5c5c;
+  --nobel: #b6b6b6;
+  --flush-mahogany: #cf3f3f;
+  --yellow-orange: #ffbd3d;
+  --sushi: #72c240;
+  --container-width-desktop: 1024px;
+  --container-padding: 24px;
+  --menu-width: 240px;
+  --poppins-font: normal 400 1rem 'Poppins', sans-serif;
+  --poppins-font-bold: normal 700 1rem 'Poppins', sans-serif;
+}
+
+.darkMode {
+  --white: #181818;
+  --black: #ffffff;
+  --cod-gray: #ffffff;
+  --tundora: #b6b6b6;
+  --scorpion: #5c5c5c;
+  --nobel: #4a4a4a;
+  --flush-mahogany: #cf3f3f;
+  --yellow-orange: #ffbd3d;
+  --sushi: #72c240;
+}

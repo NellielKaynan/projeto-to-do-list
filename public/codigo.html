@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Códigos</title>
+    <link rel="stylesheet" href="base/global.css" />
+  </head>
+  <body>
+    <aside class="menu__lateral">
+      <section class="menu__perfil">
+        <img
+          class="menu__perfil-imagem"
+          src="assets/imagens/avatar.png"
+          alt=""
+        />
+        <h1 class="menu__perfil-titulo">Capivara da Silva</h1>
+        <h2 class="menu__perfil-subtitulo">Desenvolvedora de Software</h2>
+
+        <ul class="menu__social-media">
+          <li class="menu__social-media--item">
+            <a href="#">
+              <img src="assets/icones/in.svg" alt="#" />
+            </a>
+          </li>
+          <li class="menu__social-media--item">
+            <a href="#">
+              <img src="assets/icones/gb.svg" alt="#" />
+            </a>
+          </li>
+          <li class="menu__social-media--item">
+            <a href="#">
+              <img src="assets/icones/em.svg" alt="#" />
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <nav>
+        <ul class="menu-principal__lista">
+          <li class="menu-principal-item">
+            <img
+              class="menu-principal-svg"
+              src="assets/icones/layout.svg"
+              alt=""
+            />
+            <a class="menu-principal-link" href="index.html">Dashboard</a>
+          </li>
+          <li class="menu-principal-item">
+            <img
+              class="menu-principal-svg"
+              src="assets/icones/to-do.svg"
+              alt=""
+            />
+            <a class="menu-principal-link" href="lista-de-tarefas.html"
+              >To-do</a
+            >
+          </li>
+          <li class="menu-principal-item">
+            <img
+              class="menu-principal-svg"
+              src="assets/icones/pencil.svg"
+              alt=""
+            />
+            <a class="menu-principal-link" href="codigo.html">Códigos</a>
+          </li>
+          <li class="menu-principal-item">
+            <img
+              class="menu-principal-svg"
+              src="assets/icones/cloud.svg"
+              alt=""
+            />
+            <a class="menu-principal-link" href="objetivos.html">Objetivos</a>
+          </li>
+          <li class="menu-principal-item">
+            <img
+              class="menu-principal-svg"
+              src="assets/icones/lightning.svg"
+              alt=""
+            />
+            <a class="menu-principal-link" href="ideias.html">Ideias</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="menu__botoes-mode">
+        <button class="botoes-mode botoes-mode--light">
+          <img src="assets/icones/sun.svg" alt="" />
+        </button>
+        <button class="botoes-mode botoes-mode--dark">
+          <img src="assets/icones/moon.svg" alt="" />
+        </button>
+      </div>
+
+      <p class="menu__lateral-rodape">
+        © 2024 | Desenvolvido no programa Alura Boost com Grupo Mateus por
+        Capivara da Silva | Todos os direitos reservados.
+      </p>
+    </aside>
+
+    <div class="container__codigo">
+      <div>
+        <div class="container__texto-codigo">
+          <div class="main__code-icon">
+            <svg width="40" viewBox="0 0 52 12">
+              <use href="#icon-mac"></use>
+            </svg>
+          </div>
+          <code
+            class="input__code hljs"
+            spellcheck="false"
+            contenteditable="true"
+          >
+            // CÓDIGO PLACEHOLDER const pluckDeep = key => obj =>
+            key.split('.').reduce((accum, key) => accum[key], obj) const compose =
+            (...fns) => res => fns.reduce((accum, next) => next(accum), res) const
+            unfold = (f, seed) => { const go = (f, seed, acc) => { const res =
+            f(seed) return res ? go(f, res[1], acc.concat([res[0]])) : acc }
+            return go(f, seed, []) }
+          </code>
+        </div>
+        <button class="botao__hljs" type="button">
+          Visualizar com o altalight
+        </button>
+      </div>
+
+      <form class="form">
+          <div>
+            <label class="settings__style__title" for="tituloCodigo">Seu projeto</label>
+            <input
+              class="container__input"
+              type="text"
+              placeholder="Nome do seu projeto"
+              id="tituloCodigo"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="linguagemCodigo">Linguagem</label>
+            <select class="container__input" id="linguagemCodigo">
+              <optgroup label="Programação">
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="ruby">Ruby</option>
+              </optgroup>
+              <optgroup label="Marcação">
+                <option value="xml">HTML5</option>
+              </optgroup>
+              <optgroup label="Estilização">
+                <option value="css">CSS3</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div>
+            <label for="corCodigo">Escolha uma cor</label>
+            <input
+              class="container__input settings__style__color"
+              type="color"
+              value="#6BD1FF"
+              id="corCodigo"
+            />
+          </div>
+
+          <div>
+            <label for="descricaoCodigo">Descrição</label>
+            <textarea
+              class="container__input container__textarea"
+              rows="3"
+              placeholder="Descrição do seu projeto"
+              id="descricaoCodigo"
+              required
+            ></textarea>
+          </div>
+
+          <input class="botao__hljs" type="submit" value="Salvar projeto" />
+      </form>
+    </div>
+  </body>
+
+  <script src="js/index.js" type="module"></script>
+</html>
+<svg style="display: none;">
+  <symbol id="icon-mac">
+    <circle cx="6" cy="6" r="6" fill="#FF5F56" />
+    <circle cx="26" cy="6" r="6" fill="#FFBD2E" />
+    <circle cx="46" cy="6" r="6" fill="#27C93F" />
+  </symbol>
+</svg>

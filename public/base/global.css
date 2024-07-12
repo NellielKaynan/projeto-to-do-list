@@ -1,0 +1,20 @@
+@import url('./fontes.css');
+@import url('./variaveis.css');
+@import url('./reset.css');
+@import url('../css/formulario.css');
+@import url('../css/tarefas.css');
+@import url('../css/menu.css');
+@import url('../css/objetivo.css');
+@import url('../css/codigo.css');
+
+body {
+  display: flex;
+  align-items: center;
+}
+
+.container__conteudo {
+  max-width: var(--container-width-desktop);
+  width: 100%;
+  padding: var(--container-padding);
+  margin: 0 auto;
+}

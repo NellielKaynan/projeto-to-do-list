@@ -1,0 +1,60 @@
+input[type="file"] {
+  display: none;
+}
+
+.inputImagem {
+  padding: 16px;
+  line-height: 24px;
+  background-color: var(--nobel);
+  border: 1px solid var(--tundora);
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+
+.container__objetivos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 24px;
+  gap: 24px;
+}
+
+.container__objetivo {
+  width: 48%;
+  border: 1px solid var(--tundora);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.container__objetivo--iniciar {
+  background-color: #FF0000;
+}
+
+.container__objetivo--andamento {
+  background-color: #FFFF00;
+}
+
+.container__objetivo--concluido {
+  background-color: #00FF00;
+}
+
+.objetivo__titulo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.objetivo__topicos {
+  display: flex;
+  gap: 16px;
+}
+
+.objetivo__topico {
+  border: 1px solid var(--tundora);
+  border-radius: 16px;
+  padding: 4px;
+}
+
+.objetivo__imagem {
+  border-radius: 16px;
+}
